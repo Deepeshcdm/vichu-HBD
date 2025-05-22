@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Viswanathan V - One Piece Adventure!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@300;400;700;900&display=swap');
+        
+        :root {
+            --op-red: #e12c2c;
+            --op-yellow: #ffcc00;
+            --op-blue: #005bab;
+            --op-dark: #1a1a2e;
+            --op-orange: #ff6b35;
+            --op-brown: #8B4513;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0a1128 0%, #001122 50%, #0a1128 100%);
+            color: #fff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        /* Animated Background Ocean */
+        .ocean-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -20;
+            overflow: hidden;
+        }
+        
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200%;
+            height: 100px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,96L48,85.3C96,75,192,53,288,58.7C384,64,480,96,576,106.7C672,117,768,107,864,90.7C960,75,1056,53,1152,58.7C1248,64,1344,96,1392,112L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="%23005bab"/></svg>') repeat-x;
+            animation: wave-motion 15s linear infinite;
+        }
+        
+        .wave:nth-child(2) {
+            bottom: 10px;
+            opacity: 0.7;
+            animation-delay: -5s;
+            animation-duration: 12s;
+            height: 80px;
+        }
+        
+        .wave:nth-child(3) {
+            bottom: 20px;
+            opacity: 0.4;
+            animation-delay: -2s;
+            animation-duration: 18s;
+            height: 60px;
+        }
+        
+        @keyframes wave-motion {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        /* Floating Particles */
+        .particle {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: var(--op-yellow);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float-up 8s linear infinite;
+            z-index: -10;
+        }
+        
+        @keyframes float-up {
+            0% {
+                transform: translateY(100vh) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Main Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero-title {
+            position: relative;
+            z-index: 5;
+        }
+        
+        .hero-title h1 {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: clamp(3rem, 8vw, 8rem);
+            color: var(--op-yellow);
+            text-shadow: 
+                5px 5px 0 var(--op-red),
+                -5px -5px 0 var(--op-blue),
+                10px 10px 20px rgba(0,0,0,0.5);
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            animation: title-glow 3s ease-in-out infinite alternate;
+            transform-style: preserve-3d;
+        }
+        
+        .hero-title h2 {
+            font-size: clamp(1.5rem, 4vw, 3rem);
+            color: #fff;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            color: var(--op-orange);
+            font-weight: 300;
+            margin-bottom: 50px;
+        }
+        
+        .straw-hat-logo {
+            font-size: 8rem;
+            margin-bottom: 30px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes title-glow {
+            0% { 
+                filter: brightness(1) drop-shadow(0 0 20px var(--op-yellow));
+                transform: scale(1);
+            }
+            100% { 
+                filter: brightness(1.2) drop-shadow(0 0 40px var(--op-orange));
+                transform: scale(1.05);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        /* Main Wanted Poster Section */
+        .wanted-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .wanted-poster {
+            width: 500px;
+            height: 700px;
+            background: linear-gradient(45deg, var(--op-brown) 0%, #CD853F 50%, #DEB887 100%);
+            border-radius: 20px;
+            box-shadow: 
+                0 0 50px rgba(0,0,0,0.8),
+                inset 0 0 50px rgba(255,255,255,0.1);
+            position: relative;
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+            overflow: hidden;
+        }
+        
+        .wanted-poster:hover {
+            transform: rotateY(5deg) scale(1.05);
+            box-shadow: 0 0 100px rgba(255,204,0,0.5);
+        }
+        
+        .wanted-poster::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="paper" patternUnits="userSpaceOnUse" width="100" height="100"><rect width="100" height="100" fill="%23DEB887"/><circle cx="20" cy="20" r="1" fill="%23CD853F" opacity="0.3"/><circle cx="80" cy="30" r="0.5" fill="%23CD853F" opacity="0.2"/><circle cx="40" cy="70" r="1.5" fill="%23CD853F" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23paper)"/></svg>') repeat;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        
+        .wanted-content {
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .wanted-header {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 4rem;
+            color: #000;
+            text-shadow: 2px 2px 0 #fff;
+            margin-bottom: 20px;
+            transform: rotate(-2deg);
+        }
+        
+        .photo-frame {
+            width: 300px;
+            height: 350px;
+            border: 8px solid #654321;
+            border-radius: 10px;
+            margin: 0 auto 30px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.3);
+        }
+        
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: sepia(20%) contrast(1.1);
+        }
+        
+        .bounty-text {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 2rem;
+            color: #000;
+            margin-bottom: 10px;
+        }
+        
+        .bounty-amount {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 3.5rem;
+            color: var(--op-red);
+            text-shadow: 2px 2px 0 #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .berry-symbol {
+            width: 40px;
+            height: 40px;
+            background: var(--op-yellow);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #000;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+        }
+        
+        /* Straw Hat Pirates Wanted Posters */
+        .pirates-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .pirates-title {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 3.5rem;
+            color: var(--op-yellow);
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 0 var(--op-red);
+        }
+        
+        .pirates-subtitle {
+            font-size: 1.5rem;
+            color: #f0f0f0;
+            margin-bottom: 60px;
+        }
+        
+        .pirates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .pirate-poster {
+            width: 280px;
+            height: 380px;
+            background: linear-gradient(45deg, var(--op-brown) 0%, #CD853F 50%, #DEB887 100%);
+            border-radius: 15px;
+            position: relative;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        
+        .pirate-poster:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow:
+                0 0 40px 10px var(--op-yellow),
+                0 15px 40px rgba(255,204,0,0.6),
+                0 15px 40px rgba(255,204,0,0.3);
+        }
+        
+        .pirate-poster::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="paper2" patternUnits="userSpaceOnUse" width="50" height="50"><rect width="50" height="50" fill="%23DEB887"/><circle cx="10" cy="10" r="0.5" fill="%23CD853F" opacity="0.2"/></pattern></defs><rect width="100" height="100" fill="url(%23paper2)"/></svg>') repeat;
+            opacity: 0.2;
+            pointer-events: none;
+            border-radius: 15px;
+        }
+        
+        .pirate-poster img {
+            pointer-events: none;
+        }
+        
+        .pirate-poster:hover img {
+            transform: scale(1.05) rotate(2deg);
+            transition: all 0.3s ease;
+        }
+        
+        .pirate-content {
+            padding: 25px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .pirate-wanted {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 1.8rem;
+            color: #000;
+            margin-bottom: 15px;
+        }
+        
+        .pirate-image {
+            width: 180px;
+            height: 200px;
+            border: 4px solid #654321;
+            border-radius: 8px;
+            margin: 0 auto 15px;
+            overflow: hidden;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+        
+        .pirate-name {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 1.3rem;
+            color: #000;
+            margin-bottom: 5px;
+        }
+        
+        .pirate-bounty {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 1.5rem;
+            color: var(--op-red);
+            text-shadow: 1px 1px 0 #000;
+        }
+        
+        /* Music indicator */
+        .music-indicator {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            background: var(--op-yellow);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 3;
+        }
+        
+        .pirate-poster:hover .music-indicator {
+            opacity: 1;
+        }
+        
+        /* Achievement Cards */
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            padding: 80px 0;
+        }
+        
+        .achievement-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .achievement-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .achievement-card:hover::before {
+            left: 100%;
+        }
+        
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border-color: var(--op-yellow);
+        }
+        
+        .achievement-card h2 {
+            font-family: 'Luckiest Guy', cursive;
+            color: var(--op-yellow);
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        /* Report Card Table */
+        .report-card {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        
+        .report-card th,
+        .report-card td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .report-card th {
+            background: linear-gradient(135deg, var(--op-red) 0%, var(--op-orange) 100%);
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .report-card td {
+            font-weight: 500;
+        }
+        
+        .report-card tr:nth-child(even) {
+            background-color: rgba(255,255,255,0.02);
+        }
+        
+        .report-card tr:last-child {
+            background: linear-gradient(135deg, var(--op-yellow) 0%, var(--op-orange) 100%);
+            color: #000;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .report-card tr:hover {
+            background-color: rgba(255,204,0,0.1);
+            transform: scale(1.02);
+        }
+        
+        /* One Piece Facts Section */
+        .facts-section {
+            background: linear-gradient(135deg, rgba(0,91,171,0.1) 0%, rgba(225,44,44,0.1) 100%);
+            border-radius: 25px;
+            padding: 60px;
+            margin: 80px 0;
+        }
+        
+        .facts-title {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 3rem;
+            color: var(--op-yellow);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .fact-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid var(--op-yellow);
+            transition: all 0.3s ease;
+        }
+        
+        .fact-card:hover {
+            transform: translateX(10px);
+            box-shadow: -10px 0 30px rgba(255,204,0,0.2);
+        }
+        
+        .fact-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .fact-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--op-yellow);
+            margin-bottom: 10px;
+        }
+        
+        .fact-text {
+            line-height: 1.6;
+            color: #f0f0f0;
+        }
+        
+        /* Quotes Section */
+        .quotes-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .quote-card {
+            background: linear-gradient(135deg, rgba(255,153,0,0.1) 0%, rgba(255,107,53,0.1) 100%);
+            border-left: 5px solid var(--op-yellow);
+            border-radius: 0 15px 15px 0;
+            padding: 25px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .quote-card:hover {
+            transform: translateX(10px);
+            box-shadow: -10px 0 30px rgba(255,204,0,0.2);
+        }
+        
+        .quote-text {
+            font-style: italic;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #f0f0f0;
+        }
+        
+        .quote-author {
+            text-align: right;
+            color: var(--op-yellow);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        /* Devil Fruit Powers Section */
+        .powers-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .powers-title {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 3.5rem;
+            color: var(--op-red);
+            margin-bottom: 50px;
+            text-shadow: 3px 3px 0 var(--op-yellow);
+        }
+        
+        .powers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .power-card {
+            background: linear-gradient(135deg, rgba(225,44,44,0.2) 0%, rgba(255,107,53,0.2) 100%);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .power-card::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, var(--op-red) 0%, transparent 70%);
+            transition: all 0.5s ease;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+        
+        .power-card:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .power-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(225,44,44,0.3);
+        }
+        
+        .power-fruit {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .power-name {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 1.5rem;
+            color: var(--op-yellow);
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .power-description {
+            color: #f0f0f0;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Final Message */
+        .final-message {
+            background: linear-gradient(135deg, rgba(225,44,44,0.1) 0%, rgba(255,204,0,0.1) 100%);
+            border-radius: 25px;
+            padding: 60px;
+            margin: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .final-message::before {
+            content: '🎉';
+            position: absolute;
+            font-size: 8rem;
+            top: 20px;
+            right: 30px;
+            opacity: 0.1;
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .final-message h2 {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 3rem;
+            color: var(--op-yellow);
+            margin-bottom: 30px;
+        }
+        
+        .final-message p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #f0f0f0;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--op-yellow);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        
+        .scroll-top:hover {
+            transform: scale(1.1);
+            background: var(--op-orange);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .wanted-poster {
+                width: 350px;
+                height: 500px;
+            }
+            
+            .photo-frame {
+                width: 200px;
+                height: 250px;
+            }
+            
+            .wanted-header {
+                font-size: 2.5rem;
+            }
+            
+            .bounty-amount {
+                font-size: 2.5rem;
+            }
+            
+            .achievements {
+                grid-template-columns: 1fr;
+            }
+            
+            .achievement-card {
+                padding: 25px;
+            }
+            
+            .pirates-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pirate-poster {
+                width: 250px;
+                height: 340px;
+            }
+            
+            .facts-section, .final-message {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Ocean Background -->
+    <div class="ocean-container">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="straw-hat-logo">👒</div>
+            <div class="hero-title">
+                <h1>HAPPY BIRTHDAY</h1>
+                <h2>VISWANATHAN V!</h2>
+                <p class="hero-subtitle">Set sail for another year of grand adventures! 🏴‍☠️</p>
+            </div>
+        </section>
+        
+        <!-- Main Wanted Poster Section -->
+        <section class="wanted-section">
+            <div class="wanted-poster">
+                <div class="wanted-content">
+                    <div class="wanted-header">WANTED</div>
+                    <div class="photo-frame">
+                        <img src="vichu.jpg" alt="Viswanathan V" id="birthday-photo">
+                    </div>
+                    <div class="bounty-text">BOUNTY</div>
+                    <div class="bounty-amount">
+                        <span class="berry-symbol">₿</span>
+                        420,000,000
+                        <span class="berry-symbol">₿</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Straw Hat Pirates Wanted Posters Section -->
+        <section class="pirates-section">
+            <h2 class="pirates-title">🏴‍☠️ STRAW HAT PIRATES CREW 🏴‍☠️</h2>
+            <p class="pirates-subtitle">The legendary crew that inspired your journey!</p>
+            
+            <div class="pirates-grid">
+                <div class="pirate-poster" data-character="luffy">
+                    <div class="music-indicator">🎵</div>
+                    <img src="Luffy.jpg" alt="Monkey D. Luffy Wanted Poster" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;border: 10px solid rgb(255, 253, 253);">
+                </div>
+                
+                <div class="pirate-poster" data-character="zoro">
+                    <div class="music-indicator">🎵</div>
+                    <img src="Zoro.jpg" alt="Monkey D. Luffy Wanted Poster" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;border: 10px solid rgb(255, 253, 253);">
+                </div>
+                
+                <div class="pirate-poster" data-character="nami">
+                    <div class="music-indicator">🎵</div>
+                    <img src="Nami.jpg" alt="Monkey D. Luffy Wanted Poster" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;border: 10px solid rgb(255, 253, 253);">
+                </div>
+                
+                <div class="pirate-poster" data-character="usopp">
+                    <div class="music-indicator">🎵</div>
+                    <img src="God_Usopp.jpg" alt="Monkey D. Luffy Wanted Poster" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;border: 10px solid rgb(255, 253, 253);">
+                </div>
+                
+                <div class="pirate-poster" data-character="sanji">
+                    <div class="music-indicator">🎵</div>
+                    <img src="Sanji.jpg" alt="Monkey D. Luffy Wanted Poster" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;border: 10px solid rgb(255, 253, 253);">
+                </div>
+                
+                <div class="pirate-poster" data-character="chopper">
+                    <div class="music-indicator">🎵</div>
+                    <img src="Tony_Tony_Chopper.jpg" alt="Monkey D. Luffy Wanted Poster" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;border: 10px solid rgb(255, 253, 253);">
+                </div>
+                
+                <div class="pirate-poster" data-character="robin">
+                    <div class="music-indicator">🎵</div>
+                    <img src="Nico_Robin.jpg" alt="Monkey D. Luffy Wanted Poster" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;border: 10px solid rgb(255, 253, 253);">
+                </div>
+                
+                <div class="pirate-poster" data-character="franky">
+                    <div class="music-indicator">🎵</div>
+                    <img src="franky.jpg" alt="Monkey D. Luffy Wanted Poster" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;border: 10px solid rgb(255, 253, 253);">
+                </div>
+                
+                <div class="pirate-poster" data-character="brook">
+                    <div class="music-indicator">🎵</div>
+                    <img src="brook.jpg" alt="Monkey D. Luffy Wanted Poster" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;border: 10px solid rgb(255, 253, 253);">
+                </div>
+                
+                <div class="pirate-poster" data-character="jinbe">
+                    <div class="music-indicator">🎵</div>
+                    <img src="Jinbe.jpg" alt="Monkey D. Luffy Wanted Poster" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;border: 10px solid rgb(255, 253, 253);">
+                </div>
+            </div>
+        </section>
+        
+        <!-- One Piece Facts Section -->
+        <section class="facts-section">
+            <h2 class="facts-title">🌊 ONE PIECE TREASURES & FACTS 🌊</h2>
+            <div class="facts-grid">
+                <div class="fact-card">
+                    <div class="fact-icon">🏴‍☠️</div>
+                    <div class="fact-title">The Pirate King's Dream</div>
+                    <div class="fact-text">Gold Roger, the Pirate King, left his treasure "One Piece" somewhere on the Grand Line, inspiring countless pirates to set sail!</div>
+                </div>
+                
+                <div class="fact-card">
+                    <div class="fact-icon">🌊</div>
+                    <div class="fact-title">The Grand Line</div>
+                    <div class="fact-text">A dangerous sea where only the strongest pirates dare to venture. It's divided by the Red Line and contains many mysterious islands.</div>
+                </div>
+                
+                <div class="fact-card">
+                    <div class="fact-icon">👒</div>
+                    <div class="fact-title">Straw Hat Legacy</div>
+                    <div class="fact-text">Luffy's iconic straw hat was passed down from Gold Roger to Shanks, and then to Luffy - a symbol of dreams and determination!</div>
+                </div>
+                
+                <div class="fact-card">
+                    <div class="fact-icon">⚓</div>
+                    <div class="fact-title">The Going Merry & Thousand Sunny</div>
+                    <div class="fact-text">The Straw Hats' beloved ships that carry them through their adventures. Each ship is a member of the crew in its own way!</div>
+                </div>
+                
+                <div class="fact-card">
+                    <div class="fact-icon">🎯</div>
+                    <div class="fact-title">Haki Powers</div>
+                    <div class="fact-text">The mysterious power that resides in every living being. Observation, Armament, and Conqueror's Haki make warriors incredibly strong!</div>
+                </div>
+                
+                <div class="fact-card">
+                    <div class="fact-icon">🏝️</div>
+                    <div class="fact-title">Sky Island & Laugh Tale</div>
+                    <div class="fact-text">From floating islands in the sky to the legendary final island where One Piece awaits - the world is full of incredible mysteries!</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Devil Fruit Powers Section -->
+        <section class="powers-section">
+            <h2 class="powers-title">🍎 DEVIL FRUIT POWERS 🍎</h2>
+            <div class="powers-grid">
+                <div class="power-card">
+                    <div class="power-fruit">🍖</div>
+                    <div class="power-name">Gomu Gomu no Mi</div>
+                    <div class="power-description">Luffy's rubber powers that let him stretch his body and deliver powerful attacks like Gear techniques!</div>
+                </div>
+                
+                <div class="power-card">
+                    <div class="power-fruit">🌸</div>
+                    <div class="power-name">Hana Hana no Mi</div>
+                    <div class="power-description">Robin's flower power allows her to sprout body parts anywhere, making her the perfect archaeologist and fighter!</div>
+                </div>
+                
+                <div class="power-card">
+                    <div class="power-fruit">💀</div>
+                    <div class="power-name">Yomi Yomi no Mi</div>
+                    <div class="power-description">Brook's revival fruit brought him back to life as a skeleton, giving him incredible soul-based abilities!</div>
+                </div>
+                
+                <div class="power-card">
+                    <div class="power-fruit">🦌</div>
+                    <div class="power-name">Hito Hito no Mi</div>
+                    <div class="power-description">Chopper's human fruit gives him intelligence and transformation abilities, making him the perfect doctor!</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Achievements Section -->
+        <section class="achievements">
+            <div class="achievement-card">
+                <h2>⚔️ Academic Treasures</h2>
+                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 30px; color: #f0f0f0;">
+                    Like finding the greatest treasure in the Grand Line!
+                </p>
+                
+                <table class="report-card">
+                    <thead>
+                        <tr>
+                            <th>SUBJECT</th>
+                            <th>MARKS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TAMIL</td>
+                            <td>067</td>
+                        </tr>
+                        <tr>
+                            <td>ENGLISH</td>
+                            <td>093</td>
+                        </tr>
+                        <tr>
+                            <td>MATHS</td>
+                            <td>077</td>
+                        </tr>
+                        <tr>
+                            <td>SCIENCE (Theory + Practical)</td>
+                            <td>(071 + 025) 096</td>
+                        </tr>
+                        <tr>
+                            <td>SOCIAL SCIENCE</td>
+                            <td>087</td>
+                        </tr>
+                        <tr>
+                            <td>TOTAL</td>
+                            <td>420</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p style="text-align: center; font-size: 1.3rem; font-weight: 700; color: var(--op-yellow);">
+                    🏆 RESULT: PASS WITH FLYING COLORS! 🏆
+                </p>
+            </div>
+            
+            <div class="achievement-card">
+                <h2>🌟 One Piece Wisdom</h2>
+                <div class="quotes-container">
+                    <div class="quote-card">
+                        <div class="quote-text">
+                            "It's okay to lose your way... just don't lose sight of what you have decided."
+                        </div>
+                        <div class="quote-author">- Roronoa Zoro</div>
+                    </div>
+                    
+                    <div class="quote-card">
+                        <div class="quote-text">
+                            "If you don't take risks, you can't create a future!"
+                        </div>
+                        <div class="quote-author">- Monkey D. Luffy</div>
+                    </div>
+                    
+                    <div class="quote-card">
+                        <div class="quote-text">
+                            "When do you think people die? When they are forgotten!"
+                        </div>
+                        <div class="quote-author">- Dr. Hiriluk</div>
+                    </div>
+                    
+                    <div class="quote-card">
+                        <div class="quote-text">
+                            "I want to live! Take me to the sea with you!"
+                        </div>
+                        <div class="quote-author">- Nico Robin</div>
+                    </div>
+                    
+                    <div class="quote-card">
+                        <div class="quote-text">
+                            "Dreams never end!"
+                        </div>
+                        <div class="quote-author">- Marshall D. Teach</div>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 30px; font-size: 1.2rem; line-height: 1.6; color: #f0f0f0; text-align: center;">
+                    Just like Luffy's journey to become the Pirate King, your 420 marks are the beginning of your grand adventure! 🌊
+                </p>
+            </div>
+        </section>
+        
+        <!-- Final Message -->
+        <section class="final-message">
+            <h2>🎂 Birthday Wishes from the Grand Line! 🎂</h2>
+            <p>
+                <strong>Dear Captain Viswanathan,</strong>
+            </p>
+            <p>
+                As you celebrate another year of your incredible journey, remember that like Luffy, you have the determination to overcome any challenge that comes your way.
+            </p>
+            <p>
+                Your academic achievement of 420 marks proves that you have what it takes to reach your dreams - just like finding the One Piece!
+            </p>
+            <p>
+                Like the Straw Hat Pirates, you have an amazing crew of family and friends supporting your adventure. Together, you can conquer any sea and overcome any storm.
+            </p>
+            <p>
+                May this new year bring you exciting adventures, loyal nakama, and the courage to chase your biggest dreams. The Grand Line awaits, and we know you'll conquer it all!
+            </p>
+            <p>
+                May this new year bring you exciting adventures, loyal nakama, and the courage to chase your biggest dreams. The Grand Line awaits, and we know you'll conquer it all!
+            </p>
+            <p style="font-size: 1.2rem; margin: 20px 0;">
+                <strong>Remember:</strong> "The One Piece is real!" - and so are all your dreams! 🏴‍☠️
+            </p>
+            <p style="font-size: 1.5rem; font-weight: 700; color: var(--op-yellow); margin-top: 40px;">
+                🏴‍☠️ Happy Birthday, Future Pirate King! Set sail for greatness! 🏴‍☠️
+            </p>
+            <p style="margin-top: 30px; font-style: italic; color: var(--op-orange);">
+                - With love from your Nakama ❤️
+            </p>
+        </section>
+    </div>
+    
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" onclick="scrollToTop()">
+        ⬆️
+    </div>
+    
+    <script>
+        // Audio for character theme music
+        let currentAudio = null;
+        
+        // Play character theme
+        function playCharacterTheme(character) {
+            console.log('Attempting to play theme for:', character);
+            
+            // Stop current audio
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+            }
+            
+            try {
+                // Play new audio
+                const audioPath = `audio/${character}-theme.mp3.mp3`;
+                console.log('Loading audio from:', audioPath);
+                
+                currentAudio = new Audio(audioPath);
+                currentAudio.volume = 0.3;
+                
+                // Add event listeners for debugging
+                currentAudio.addEventListener('canplaythrough', () => {
+                    console.log('Audio can play through');
+                });
+                
+                currentAudio.addEventListener('error', (e) => {
+                    console.error('Audio error:', e);
+                });
+                
+                currentAudio.addEventListener('playing', () => {
+                    console.log('Audio started playing');
+                });
+                
+                // Try to play the audio
+                const playPromise = currentAudio.play();
+                
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.error('Playback failed:', error);
+                    });
+                }
+            } catch (error) {
+                console.error('Error setting up audio:', error);
+            }
+        }
+        
+        // Stop all current playing sounds
+        function stopAllSounds() {
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+            }
+        }
+        
+        // Enhanced pirate poster interactions
+        document.querySelectorAll('.pirate-poster').forEach(poster => {
+            const character = poster.dataset.character;
+            let audio = null;
+
+            poster.addEventListener('mouseover', function() {
+                // Clean up any previous audio
+                if (audio) {
+                    audio.pause();
+                    audio.currentTime = 0;
+                }
+                // Try both possible file extensions
+                let audioPath = `audio/${character}-theme.mp3.mp3`;
+                audio = new Audio(audioPath);
+                audio.volume = 0.3;
+                audio.play().catch(e => {
+                    // If .mp3.mp3 fails, try .mp3
+                    audioPath = `audio/${character}-theme.mp3`;
+                    audio = new Audio(audioPath);
+                    audio.volume = 0.3;
+                    audio.play().catch(err => {
+                        console.log('Audio not found for', character);
+                    });
+                });
+                // Store audio on the element for cleanup
+                poster._audio = audio;
+            });
+
+            poster.addEventListener('mouseout', function() {
+                if (poster._audio) {
+                    poster._audio.pause();
+                    poster._audio.currentTime = 0;
+                }
+            });
+
+            poster.addEventListener('click', function() {
+                // Create visual flash effect
+                const flash = document.createElement('div');
+                flash.style.position = 'absolute';
+                flash.style.top = '0';
+                flash.style.left = '0';
+                flash.style.right = '0';
+                flash.style.bottom = '0';
+                flash.style.background = 'rgba(255, 204, 0, 0.3)';
+                flash.style.borderRadius = '15px';
+                flash.style.pointerEvents = 'none';
+                flash.style.animation = 'flash 0.3s ease-out';
+                this.appendChild(flash);
+                setTimeout(() => {
+                    flash.remove();
+                }, 300);
+            });
+        });
+        
+        // Create floating particles
+        function createParticles() {
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    createParticle();
+                }, i * 200);
+            }
+        }
+        
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            
+            const left = Math.random() * window.innerWidth;
+            const size = Math.random() * 4 + 2;
+            const duration = Math.random() * 5 + 5;
+            const delay = Math.random() * 2;
+            
+            particle.style.left = `${left}px`;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.animationDuration = `${duration}s`;
+            particle.style.animationDelay = `${delay}s`;
+            
+            // Random colors
+            const colors = ['#ffcc00', '#ff6b35', '#005bab', '#e12c2c'];
+            particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+            
+            document.body.appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, (duration + delay) * 1000);
+        }
+        
+        // Create treasure sparkles effect
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.style.position = 'fixed';
+            sparkle.style.width = '6px';
+            sparkle.style.height = '6px';
+            sparkle.style.background = '#ffcc00';
+            sparkle.style.borderRadius = '50%';
+            sparkle.style.pointerEvents = 'none';
+            sparkle.style.zIndex = '-5';
+            
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
+            sparkle.style.left = `${x}px`;
+            sparkle.style.top = `${y}px`;
+            
+            sparkle.style.animation = 'sparkle 2s ease-out forwards';
+            
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => {
+                sparkle.remove();
+            }, 2000);
+        }
+        
+        // Add sparkle animation
+        const sparkleStyle = document.createElement('style');
+        sparkleStyle.textContent = `
+            @keyframes sparkle {
+                0% {
+                    transform: scale(0) rotate(0deg);
+                    opacity: 1;
+                }
+                50% {
+                    transform: scale(1) rotate(180deg);
+                    opacity: 1;
+                }
+                100% {
+                    transform: scale(0) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(sparkleStyle);
+        
+        // Add flash animation
+        const flashStyle = document.createElement('style');
+        flashStyle.textContent = `
+            @keyframes flash {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+        `;
+        document.head.appendChild(flashStyle);
+        
+        // Start particle animation
+        createParticles();
+        setInterval(createParticles, 10000);
+        
+        // Create sparkles periodically
+        setInterval(createSparkle, 500);
+        
+        // Scroll to top function (ensure global)
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Show/hide scroll button
+        window.addEventListener('scroll', () => {
+            const scrollButton = document.querySelector('.scroll-top');
+            if (window.pageYOffset > 300) {
+                scrollButton.style.opacity = '1';
+                scrollButton.style.visibility = 'visible';
+            } else {
+                scrollButton.style.opacity = '0';
+                scrollButton.style.visibility = 'hidden';
+            }
+        });
+        
+        // Add loading animation for photo
+        document.addEventListener('DOMContentLoaded', function() {
+            const photo = document.getElementById('birthday-photo');
+            photo.addEventListener('load', function() {
+                this.style.opacity = '1';
+                this.style.transform = 'scale(1)';
+            });
+            
+            // Set initial state
+            photo.style.opacity = '0';
+            photo.style.transform = 'scale(0.8)';
+            photo.style.transition = 'all 0.5s ease';
+        });
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all major sections
+        document.querySelectorAll('.achievement-card, .pirate-poster, .fact-card, .power-card').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Add fadeInUp animation
+        const fadeStyle = document.createElement('style');
+        fadeStyle.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(fadeStyle);
+        
+        // Initialize audio context on user interaction
+        document.addEventListener('click', initAudioContext, { once: true });
+        document.addEventListener('touchstart', initAudioContext, { once: true });
+        
+        // Clean up audio on page unload
+        window.addEventListener('beforeunload', () => {
+            stopAllSounds();
+            if (audioContext) {
+                audioContext.close();
+            }
+        });
+    </script>
+</body>
+</html>
